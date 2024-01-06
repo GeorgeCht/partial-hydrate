@@ -1,0 +1,84 @@
+{
+  "name": "partial-hydrate",
+  "description": "Partial React hydration wrapper component based on screen width for faster responsive performances",
+  "version": "1.0.0",
+  "type": "module",
+  "author": "GeorgeCht <georgecht@icloud.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint --fix . --ext ts,tsx",
+    "lint:staged": "npm run lint:fix && npm run format",
+    "prepare": "husky install",
+    "format": "prettier --write src//**/*.{ts,tsx,css} --config ./.prettierrc",
+    "preview": "vite preview",
+    "bundle": "microbundle",
+    "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "npm run lint",
+      "npm run format"
+    ]
+  },
+  "keywords": [
+    "react",
+    "partial",
+    "render",
+    "hydrate",
+    "hydration",
+    "viewport",
+    "responsive",
+    "mobile",
+    "respond",
+    "client",
+    "client only",
+    "hydration mismatch",
+    "skip render",
+    "partial render",
+    "partial hydrate",
+    "partial hydration"
+  ],
+  "dependencies": {
+    "jest-environment-jsdom": "^29.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.2.0",
+    "@testing-library/react": "^14.1.2",
+    "@types/jest": "^29.5.11",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "husky": "^8.0.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "microbundle": "^0.15.1",
+    "prettier": "^3.1.1",
+    "react-hooks": "^1.0.1",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  },
+  "engines": {
+    "node": ">=0.10"
+  }
+}
