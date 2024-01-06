@@ -1,7 +1,8 @@
+import '@testing-library/jest-dom'
+
+import { render, screen } from '@testing-library/react'
 import * as React from 'react'
 
-import '@testing-library/jest-dom'
-import { render, screen } from '@testing-library/react'
 import { PartialHydrate } from '../PartialHydrate'
 
 const mockChildren = (<div>Mock children</div>) as React.ReactNode
@@ -99,7 +100,7 @@ test('verify "when" condition gets priority over minWidth and maxWidth', () => {
   render(
     <PartialHydrate maxWidth={1000} minWidth={1920} when={() => window.innerWidth > 1024}>
       {mockChildren}
-    </PartialHydrate>
+    </PartialHydrate>,
   )
   expect(screen.getByText('Mock children')).toBeInTheDocument()
 })
@@ -109,7 +110,7 @@ test('verify "when" condition gets priority over minWidth and maxWidth', () => {
   render(
     <PartialHydrate maxWidth={0} minWidth={800} when={() => window.innerWidth > 1024}>
       {mockChildren}
-    </PartialHydrate>
+    </PartialHydrate>,
   )
   expect(screen.queryByText('Mock children')).not.toBeInTheDocument()
 })

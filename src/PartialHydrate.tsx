@@ -1,5 +1,6 @@
 import * as React from 'react'
-import { PartialHydrateProps, RequireAtLeastOne, FnIsDefined } from './types'
+
+import { FnIsDefined, PartialHydrateProps, RequireAtLeastOne } from './types'
 
 function useIsFirstRender(): boolean {
   const isFirst = React.useRef(true)
