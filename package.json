@@ -1,7 +1,7 @@
 {
   "name": "partial-hydrate",
   "description": "Partial React hydration wrapper component based on screen width for faster responsive performances",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "author": "GeorgeCht <georgecht@icloud.com>",
   "license": "MIT",
   "bugs": {
