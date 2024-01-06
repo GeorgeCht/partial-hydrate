@@ -2,9 +2,23 @@
   "name": "partial-hydrate",
   "description": "Partial React hydration wrapper component based on screen width for faster responsive performances",
   "version": "1.0.0",
-  "type": "module",
   "author": "GeorgeCht <georgecht@icloud.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/georgecht/partial-hydrate/issues"
+  },
+  "homepage": "https://github.com/georgecht/partial-hydrate#readme",
+  "type": "module",
+  "source": "src/PartialHydrate.tsx",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "require": "./dist/index.js",
+    "default": "./dist/index.modern.mjs"
+  },
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/index.umd.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -12,9 +26,9 @@
     "lint:fix": "eslint --fix . --ext ts,tsx",
     "lint:staged": "npm run lint:fix && npm run format",
     "prepare": "husky install",
-    "format": "prettier --write src//**/*.{ts,tsx,css} --config ./.prettierrc",
+    "format": "prettier --write src//**/*.{ts,tsx} --config ./.prettierrc",
     "preview": "vite preview",
-    "bundle": "microbundle",
+    "bundle": "microbundle src/PartialHydrate.tsx",
     "test": "jest"
   },
   "husky": {
@@ -77,6 +91,10 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgecht/partial-hydrate.git"
   },
   "engines": {
     "node": ">=0.10"

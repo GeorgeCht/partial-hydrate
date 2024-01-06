@@ -3,7 +3,7 @@ import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
 import * as React from 'react'
 
-import { PartialHydrate } from '../PartialHydrate'
+import { PartialHydrate } from '../src/PartialHydrate'
 
 const mockChildren = (<div>Mock children</div>) as React.ReactNode
 
