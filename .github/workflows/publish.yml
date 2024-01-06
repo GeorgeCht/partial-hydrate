@@ -1,8 +1,11 @@
 name: Publish package on NPM
 
 on:
-  release:
-    types: [created]
+  pull_request:
+  push:
+    branches:
+      - main
+      - releases/*
 
 jobs:
   build:
