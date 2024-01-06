@@ -1,15 +1,15 @@
 # Partial Hydrate [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build and Test](https://github.com/actions/checkout/actions/workflows/test.yml/badge.svg)](https://github.com/actions/checkout/actions/workflows/test.yml)
 
-## 👋 Introduction
+## Introduction
 Provides a `<PartialHydrate>` component that conditionally _skips hydrating children_ by removing them from the DOM _before the first client render_. Removing them before ensures hydration is successful and there are no hydration mismatch errors.
 
-## 🚀 Install
+## Install
 
 ```
 npm i partial-hydrate
 ```
 
-## 🔧 Usage
+## Usage
 
 ```tsx
   <PartialHydrate when={() => { window.innerWidth <= 680 }}>
@@ -17,7 +17,7 @@ npm i partial-hydrate
   </PartialHydrate>
 ```
 
-## ⚙️ Props
+## Props
 - `minWidth`: will render if window width is greater than `minWidth` value.
 - `maxWidth`: will render if window width is lesser than `maxWidth` value.
 - `when()`: `function` that must return `true` for the render to happen.
@@ -56,27 +56,27 @@ const MyComponent = () => {
 }
 ```
 
-## 🔍 Use case
+## Use case
 When using React's server-side rendering, we often need to render components on the server even if they are conditional on the client _e.g. hidden based on window width_.
 
 In order for hydration to succeed, the first client render must match the DOM (which is generated from the HTML returned by the server), otherwise we will get hydration mismatch errors. This means the component must be rendered again during the first client render.
 
 However, hydration is expensive, so we really don't want to pay that penalty only for the element to be hidden or removed immediately afterwards.
 
-## ⚠️ Caveats
+## Caveats
 So is this another react _responsive_ rendering library? Nope. If the prop conditions are not met, then `<PartialHydrate>`'s children are never rendered.
 
 #### ✋ Keep in mind
 Also, keep in mind that using `<PartialHydrate>` does not work on window resize and it is not meant to!
 
-## ✍️ Authors
+## Authors
 
 Based on a gist by [OliverJAsh](https://github.com/OliverJAsh). Developed, modified and maintained by [George Cht](https://github.com/GeorgeCht).
 
 - George Cht ([@GeorgeCht](https://github.com/GeorgeCht))
 - Oliver Joseph Ash ([@OliverJAsh](https://github.com/OliverJAsh))
 
-## 📄 License
+## License
 
 [MIT License](https://opensource.org/licenses/MIT)
 
