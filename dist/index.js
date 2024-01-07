@@ -3,6 +3,7 @@ import {useRef as $8FHVn$useRef, useId as $8FHVn$useId} from "react";
 
 
 
+"use client";
 function $d0364e2b86aeee55$var$useIsFirstRender() {
     var isFirst = $8FHVn$useRef(true);
     return !!isFirst.current && (isFirst.current = false, true);
@@ -13,7 +14,7 @@ var $d0364e2b86aeee55$var$isDefined = function(v) {
 var $d0364e2b86aeee55$export$c5c33552843c1224 = function(param) {
     var children = param.children, minWidth = param.minWidth, maxWidth = param.maxWidth, when = param.when;
     var id = "partial:" + $8FHVn$useId();
-    var isClient = $d0364e2b86aeee55$var$isDefined(window);
+    var isClient = typeof window !== "undefined";
     var isFirstRender = $d0364e2b86aeee55$var$useIsFirstRender();
     var innerWidth = window.innerWidth;
     var removeChildren = function(id) {

@@ -1,3 +1,4 @@
+'use client'
 import * as React from 'react'
 
 /**
@@ -43,7 +44,7 @@ export const PartialHydrate: React.FC<
   RequireAtLeastOne<PartialHydrateProps, 'minWidth' | 'maxWidth' | 'when'>
 > = ({ children, minWidth, maxWidth, when }) => {
   const id = 'partial:' + React.useId()
-  const isClient = isDefined(window)
+  const isClient = typeof window !== 'undefined'
   const isFirstRender = useIsFirstRender()
   const innerWidth = window.innerWidth
 
