@@ -1,7 +1,8 @@
-# Partial Hydrate [![NPM version][npm-image]][npm-url] ![npm bundle size](https://img.shields.io/bundlephobia/minzip/partial-hydrate?logo=npm) [![Downloads][downloads-image]][npm-url] [![Test](https://github.com/actions/checkout/actions/workflows/test.yml/badge.svg)](https://github.com/actions/checkout/actions/workflows/test.yml)
+# Partial Hydrate [![npm version][npm-image]][npm-url] ![npm bundle size](https://img.shields.io/bundlephobia/minzip/partial-hydrate?logo=npm) [![Downloads][downloads-image]][npm-url] [![Test](https://github.com/actions/checkout/actions/workflows/test.yml/badge.svg)](https://github.com/actions/checkout/actions/workflows/test.yml)
 
 ## Introduction
 
+![intro](example.png)
 Provides a `<PartialHydrate>` component that conditionally _skips hydrating children_ by removing them from the DOM _before the first client render_. Removing them before ensures hydration is successful and there are no hydration mismatch errors.
 
 ## Install
