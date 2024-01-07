@@ -23,7 +23,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint --fix . --ext ts,tsx",
     "lint:staged": "npm run lint:fix && npm run format",
-    "prepare": "husky install",
+    "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\"",
     "format": "prettier --write src//**/*.{ts,tsx} --config ./.prettierrc",
     "bundle": "npx parcel build src/PartialHydrate.tsx",
     "test": "jest",
