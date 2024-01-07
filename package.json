@@ -1,7 +1,7 @@
 {
   "name": "partial-hydrate",
   "description": "Partial React hydration wrapper component based on screen width for faster responsive performances",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "author": "GeorgeCht <georgecht@icloud.com>",
   "license": "MIT",
   "bugs": {
@@ -26,8 +26,7 @@
     "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\"",
     "format": "prettier --write src//**/*.{ts,tsx} --config ./.prettierrc",
     "bundle": "npx parcel build src/PartialHydrate.tsx",
-    "test": "jest",
-    "postinstall": "if [ \"$npm_config_omit\" = \"dev\" ]; then echo \"Skip husky installation\"; else husky install; fi"
+    "test": "jest"
   },
   "husky": {
     "hooks": {
