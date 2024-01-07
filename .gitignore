@@ -12,6 +12,9 @@ node_modules
 dist-ssr
 *.local
 
+# Parcel cache
+.parcel-cache
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
