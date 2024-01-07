@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 /**
  * Requires at least one property of the given type T.
  *
@@ -27,4 +27,6 @@ export type PartialHydrateProps = {
     when?: () => boolean;
     children: React.ReactNode;
 };
-export declare const PartialHydrate: React.FC<RequireAtLeastOne<PartialHydrateProps, 'minWidth' | 'maxWidth' | 'when'>>;
+export const PartialHydrate: React.FC<RequireAtLeastOne<PartialHydrateProps, 'minWidth' | 'maxWidth' | 'when'>>;
+
+//# sourceMappingURL=index.d.ts.map
