@@ -11,11 +11,9 @@
   "type": "module",
   "source": "src/PartialHydrate.tsx",
   "main": "dist/index.js",
-  "module": "dist/index.module.js",
   "exports": {
     "types": "./dist/index.d.ts",
-    "require": "./dist/index.js",
-    "default": "./dist/index.modern.mjs"
+    "require": "./dist/index.js"
   },
   "types": "dist/index.d.ts",
   "unpkg": "dist/index.umd.js",
