@@ -26,7 +26,8 @@
     "prepare": "husky install",
     "format": "prettier --write src//**/*.{ts,tsx} --config ./.prettierrc",
     "bundle": "npx parcel build src/PartialHydrate.tsx",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "if [ \"$npm_config_omit\" = \"dev\" ]; then echo \"Skip husky installation\"; else husky install; fi"
   },
   "husky": {
     "hooks": {
